@@ -3,6 +3,7 @@ package lpweb.apiRest.controllers;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,8 +28,7 @@ import lpweb.apiRest.repository.UsuarioRepository;
  * A sample greetings controller to return greeting text
  */
 @RestController
-public class GreetingsController {
-	
+public class JogadorController {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
     /**
@@ -95,6 +95,10 @@ public class GreetingsController {
     	return new ResponseEntity<Jogador>(user, HttpStatus.OK);
     	
     }
+    
+
+    
+    
     
     
 }
