@@ -1,5 +1,6 @@
 package lpweb.apiRest.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -9,7 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Campeonato {
+public class Campeonato implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

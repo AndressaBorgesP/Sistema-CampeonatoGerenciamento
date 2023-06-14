@@ -4,7 +4,9 @@ import java.util.List;
 
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lpweb.apiRest.model.Jogador;
+import lpweb.apiRest.dto.JogadorDTO;
 import lpweb.apiRest.repository.UsuarioRepository;
 
 /**
@@ -80,7 +83,6 @@ public class JogadorController {
     	
     }
     
-    
     /*END-POINT para atualizar usuário*/
     @PutMapping(value = "atualizar")
     @ResponseBody
@@ -95,6 +97,12 @@ public class JogadorController {
     	return new ResponseEntity<Jogador>(user, HttpStatus.OK);
     	
     }
+    
+  /*  @GetMapping(value = "search")
+    public Page<JogadorDTO> searchJogadores(@RequestParam(defaultValue = "0") int page,
+                                            @RequestParam(defaultValue = "10") int size) {
+        return jogadorService.searchJogadores(page, size);
+    }*/
     
 
     
