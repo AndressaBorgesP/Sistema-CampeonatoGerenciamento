@@ -80,5 +80,16 @@ public class PartidaController {
     	return new ResponseEntity<Partida>(user, HttpStatus.OK);
     	
     }
+    
+    /*
+     *  @GetMapping(value = "/campeonatos/{campeonatoId}/partidas/ocorridas")
+    public List<Partida> getPartidasOcorridas(@PathVariable Long campeonatoId) {
+        return partidaService.getPartidasOcorridas(campeonatoId);
+    }
+
+    @GetMapping(value = "/campeonatos/{campeonatoId}/partidas/nao-ocorridas")
+    public List<Partida> getPartidasNaoOcorridas(@PathVariable Long campeonatoId) {
+        return partidaService.getPartidasNaoOcorridas(campeonatoId);
+    }*/
 
 }

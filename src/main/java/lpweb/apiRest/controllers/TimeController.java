@@ -81,13 +81,13 @@ public class TimeController {
     	
     }
     
-/*     @GetMapping("/campeonato/{id}")
+/*     @GetMapping(value = "/campeonato/{id}")
     public ResponseEntity<List<TimeDTO>> getTimesByCampeonatoId(@PathVariable Long id) {
         List<TimeDTO> times = timeService.getTimesByCampeonatoId(id);
         return new ResponseEntity<List<Time>>(times, HttpStatus.OK);
     }
 
-    @GetMapping("/tabela-campeonato/{id}")
+    @GetMapping(value = "/tabela-campeonato/{id}")
     public List<TimeDTO> getTabelaCampeonato(@PathVariable Long id) {
         return timeService.getTabelaCampeonatoById(id);
     }
