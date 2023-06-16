@@ -24,6 +24,9 @@ public class Campeonato implements Serializable{
 	
 	@OneToMany(mappedBy="campeonato")
 	private List<Partida> partidas;
+	
+	@OneToMany(mappedBy="campeonato")
+	private List<Time> times;
 
 	public Long getId() {
 		return id;

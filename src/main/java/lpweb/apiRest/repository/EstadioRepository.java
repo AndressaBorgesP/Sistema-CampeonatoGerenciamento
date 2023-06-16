@@ -1,5 +1,9 @@
 package lpweb.apiRest.repository;
 
-public interface EstadioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import lpweb.apiRest.model.Estadio;
+
+public interface EstadioRepository extends JpaRepository<Estadio, Long>{
 
 }

@@ -2,13 +2,14 @@ package lpweb.apiRest.model;
 import java.io.Serializable;
 
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.ForeignKey;
 
 @Entity
 public class Jogador implements Serializable {
@@ -21,14 +22,14 @@ public class Jogador implements Serializable {
 	
 	private String nome;
 	
-	private int idade;
+	private String dataNascimento;
 	
 	private String genero;
 	
-	private float altura;
+	private double altura;
 	
-	@ForeignKey(name ="time_id")
 	@ManyToOne
+	@JoinColumn(name ="time_id")
 	private Time time;
 
 	public Long getId() {
@@ -47,12 +48,12 @@ public class Jogador implements Serializable {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
-		return idade;
+	public String getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	public String getGenero() {
@@ -63,11 +64,11 @@ public class Jogador implements Serializable {
 		this.genero = genero;
 	}
 
-	public float getAltura() {
+	public double getAltura() {
 		return altura;
 	}
 
-	public void setAltura(float altura) {
+	public void setAltura(double altura) {
 		this.altura = altura;
 	}
 
@@ -78,6 +79,8 @@ public class Jogador implements Serializable {
 	public void setTime(Time time) {
 		this.time = time;
 	}
+
+	
 	
 	
 	
